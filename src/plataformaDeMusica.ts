@@ -3,12 +3,12 @@ import { Contenido } from "./contenido";
 export class PlataformaDeMusica { // clase
     private canciones: Contenido[] = []; // propiedad privada
 
-    public agregarCancion(cancion: Contenido): void { // metodo publico
-        this.canciones.push(cancion);
+    public agregarCancion(contenido: Contenido): void { // metodo publico
+        this.canciones.push(contenido);
     }
     
     public mostrarCanciones(): string { // metodo publico x2
-        return this.canciones.map(c => c.mostrarInfo()).join("\n"); // mapea cada cancion a su info y las une con salto de linea
+        return this.canciones.map(cancion => cancion.mostrarInfo()).join("\n"); 
     }
     
     public buscar(titulo: string): string; // sobrecarga de metodo porque se puede buscar por titulo o por titulo y artista

@@ -24,4 +24,18 @@ describe('Contenido (a través de Cancion)', () => {
     expect(cancion.pausar()).toBe('Cancion pausada: Drivers License');
     expect(cancion.detener()).toBe('Cancion detenida: Drivers License');
   });
+
+  it('deberia manejar marcar favorito multiples veces', () => {
+    const cancion = new Cancion('Drivers License', 'Olivia Rodrigo', 4.2);
+    expect(cancion.isFavorito()).toBe(false);
+
+    cancion.marcarComoFavorito();
+    expect(cancion.isFavorito()).toBe(true);
+
+    cancion.marcarComoFavorito(); // Ya es favorito, pero no cambia
+    expect(cancion.isFavorito()).toBe(true);
+
+    cancion.desmarcarFavorito();
+    expect(cancion.isFavorito()).toBe(false);
+  });
 });

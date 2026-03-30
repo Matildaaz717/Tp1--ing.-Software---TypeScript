@@ -1,11 +1,11 @@
-export interface IReproductorMusica { // interfaz para el reproductor de musica
+export interface IReproductorMusica { 
     reproducir(): string;
     pausar(): string;
     detener(): string;
     avanzar(): string;
 }
 
-export interface IMarcarFavorito { // interfaz para marcar como favorito
+export interface IMarcarFavorito { 
     marcarComoFavorito(): string;
 }
 

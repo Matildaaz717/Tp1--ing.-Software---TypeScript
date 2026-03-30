@@ -1,4 +1,4 @@
-import { Cancion } from "./cancion"; //import se utiliza para importar la clase Cancion desde el archivo cancion.ts
+import { Cancion } from "./cancion"; //import se utiliza para importar la clase Cancion desde el archivo cancion.ts 
 import { Album } from "./album"; //x2
 import { PlataformaDeMusica } from "./plataformaDeMusica"; //x3
 
@@ -12,7 +12,7 @@ plataforma.agregarCancion(cancion1);
 plataforma.agregarCancion(cancion2);
 plataforma.agregarCancion(album1);
 
-console.log(plataforma.mostrarCanciones()); //console.log sirve para mostrar el resultado de la función mostrarCanciones() 
+console.log(plataforma.mostrarCanciones()); //console.log sirve para mostrar el resultado de la funcion mostrarCanciones() 
 console.log(plataforma.buscar("The Subway"));
 console.log(plataforma.buscar("The Subway", "Chappell Roan"));
 console.log(cancion1.marcarComoFavorito());

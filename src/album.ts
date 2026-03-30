@@ -22,5 +22,5 @@ export class Album extends Contenido implements IReproductorMusica {
     }
        public mostrarInfo(): string {
         return `Album: ${this.titulo} | Artista: ${this.artista} | Duracion: ${this.duracion} minutos`;
-    }
+    } //
 }
