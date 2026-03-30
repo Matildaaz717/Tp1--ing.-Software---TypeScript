@@ -33,7 +33,7 @@ describe('PlataformaDeMusica', () => {
     expect(plataforma.mostrarCanciones()).toBe('');
     });
 
-    it('deberia agregar albums y mostrar su informacion junto con canciones', () => {
+    it('deberia agregar albums y mostrar su informacion junto con las canciones', () => {
         const plataforma = new PlataformaDeMusica();
         const cancion = new Cancion("traitor", "Olivia Rodrigo", 4.1);
         const album = new Album("Sour", "Olivia Rodrigo", 40);
