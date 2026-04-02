@@ -1,5 +1,5 @@
 
-//print 
+/* //print 
 console.log ("hola mundo")
 
 //variable 
@@ -16,4 +16,4 @@ console.log(texto2)
 
 let texto2: string ="esto es una cadena de texto"
 
-// export permite que las clases puedan usarse en otros archivos 
+// export permite que las clases puedan usarse en otros archivos */
