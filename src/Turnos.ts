@@ -3,20 +3,22 @@ import { Servicio } from "./Servicio";
 import { IMostrar } from "./IMostrar";
 import { ICancelar } from "./ICancelar";
 
-export class Turnos implements Cliente, Servicio, IMostrar, ICancelar{
+export class Turnos implements IMostrar, ICancelar{
 
     private Clientes: Cliente; 
     private Servicios: Servicio;
     private Fecha: string;
     private Hora: string;
     private Identificacion: number;
+    private Estado:string;
 
-    constructor (Clientes: Cliente, Servicios: Servicio, Fecha: string, Hora: string, ) {
+    constructor (Clientes: Cliente, Servicios: Servicio, Fecha: string, Hora: string, Identificacion:number) {
         this.Clientes = Clientes;
         this.Servicios = Servicios;
         this.Fecha = Fecha;
         this.Hora = Hora;
-        this.Identificacion= this.Identificacion;
+        this.Identificacion= Identificacion; 
+        this.Estado= "RESERVADO";
     }
 
 public getClientes():Cliente{
@@ -34,12 +36,16 @@ public getHora():String{
 public getIdentificacion(): number {
     return this.Identificacion;
 }
+public cancelar(): void{
+    this.Estado = "Turno CANCELADO";
+}
 
 public mostrarDatos(): string {
     return "Turno Nro: " + this.Identificacion +
     "Nombre del Cliente: " + this.Clientes.getNombre()+
     "Servicio a Realizar: " + this.Servicios.getNombre()+
     "Fecha del Turno: " + this.Fecha+
-    "Hora del Turno: " + this.Hora;
+    "Hora del Turno: " + this.Hora + 
+    "Estado del Turno: " + this.Estado;
 }
 }
