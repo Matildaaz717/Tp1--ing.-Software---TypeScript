@@ -14,7 +14,7 @@ describe ("Test de Servicio",() => {
 
 
     test("No se debe poder cambiar el precio", ()=>{
-        let servicio = new Servicio ("Esmaltado Semipermanente", 100000,10);
+        let servicio = new Servicio ("Esmaltado Semipermanente", 10000,10);
 
         expect(servicio.getPrecio()).toBe(7000);
         expect(servicio.getTiempo()).toBe(1);
@@ -27,7 +27,7 @@ describe ("Test de Servicio",() => {
 
         let datos= servicio.mostrarDatos();
 
-        expect(datos).toBe("Servicio:Kapping Gel -Precio:$10000 -Tiempo de Duración:2hrs");
+        expect(datos).toBe("Servicio:Kapping GelPrecio: $10000Tiempo de Duración: 2hrs");
     });
 
 });

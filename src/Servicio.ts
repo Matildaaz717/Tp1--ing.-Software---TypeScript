@@ -8,15 +8,7 @@ export class Servicio implements IMostrar{
 
     constructor (nombre: string, precio: number, tiempo: number){
         this.nombre= nombre;
-        this.precio= precio;
-        this.tiempo = tiempo; 
         
-
-        if (precio && tiempo){
-           this.precio= precio;
-           this.tiempo = tiempo;  
-        }
-        else{ 
             if (nombre==="Esmaltado Semipermanente"){
                 this.precio= 7000;
                 this.tiempo= 1;
@@ -30,8 +22,12 @@ export class Servicio implements IMostrar{
                 this.precio= 17000;
                 this.tiempo= 3;
             }
+            else{
+                this.precio = precio;
+                this.tiempo= tiempo;
+            }
         }
-    }
+    
 
     
 
@@ -46,8 +42,6 @@ export class Servicio implements IMostrar{
     } 
 
     public mostrarDatos(): string {
-        return "Servicio:" + this.nombre + 
-               "Precio: $" + this.precio + 
-               "Tiempo de Duración: " + this.tiempo + "hrs"
+        return "Servicio:" + this.nombre + "Precio: $" + this.precio + "Tiempo de Duración: " + this.tiempo + "hrs"
     }
     }
