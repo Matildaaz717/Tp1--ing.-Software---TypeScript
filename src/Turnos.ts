@@ -20,7 +20,7 @@ export class Turnos implements IMostrar, ICancelar{
         this.Identificacion= Identificacion; 
         this.Estado= "RESERVADO";
     }
-
+    
 public getClientes():Cliente{
    return this.Clientes; 
 }
@@ -36,7 +36,7 @@ public getHora():String{
 public getIdentificacion(): number {
     return this.Identificacion;
 }
-public cancelar(): void{
+public cancelarDatos(): void{
     this.Estado = "Turno CANCELADO";
 }
 

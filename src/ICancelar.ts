@@ -1,3 +1,3 @@
 export interface ICancelar{ 
-    cancelarDatos(): string; 
+    cancelarDatos(): void; 
 }
