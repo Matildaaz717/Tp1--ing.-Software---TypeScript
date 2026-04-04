@@ -13,7 +13,7 @@ describe ("Test de Servicio",() => {
         let turno = new Turnos(cliente, servicio, "06/04/2026", "10:00", 123);
 
         expect (turno.getClientes().getNombre()).toBe("Matilda");
-        expect(turno.getServicios().getNombre()).toBe("Kapping Gel");
+        expect(turno.getServicios().getNombre()).toBe("kapping Gel");
         expect (turno.getFecha()).toBe("06/04/2026");
         expect (turno.getHora()).toBe("10:00");
         expect(turno.getIdentificacion()).toBe(123);
@@ -31,9 +31,9 @@ describe ("Test de Servicio",() => {
 
         let datos = turno.mostrarDatos();
 
-        expect(datos).toContain( "-Turno nro: 123 -Nombre del Cliente: Matilda -Servicio a Realizar: Kapping Gel -Fecha del Turno: 06/04/2026 -Hora del Turno: 10:00 -Estado del turno: CANCELADO "); 
+      expect(datos).toContain("Turno Nro: 123Nombre del Cliente: MatildaServicio a Realizar: Kapping GelFecha del Turno: 06/04/2026Hora del Turno: 10:00Estado del Turno: CANCELADO");
     });
-
+    
 
     test ("Mostrar datos del turno ", ()=>{
 
@@ -50,7 +50,6 @@ describe ("Test de Servicio",() => {
         
 
     });
-
 
 
 

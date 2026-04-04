@@ -30,14 +30,14 @@ public getServicios():Servicio{
 public getFecha():string{
    return this.Fecha; 
 }
-public getHora():String{
+public getHora():string{
    return this.Hora; 
 }
 public getIdentificacion(): number {
     return this.Identificacion;
 }
 public cancelarDatos(): void{
-    this.Estado = "Turno CANCELADO";
+    this.Estado = "CANCELADO";
 }
 
 public mostrarDatos(): string {
