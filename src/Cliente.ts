@@ -1,11 +1,12 @@
  import { IMostrar } from "./IMostrar";
-
- export class Cliente implements IMostrar{  
+ import { Persona } from "./Persona";
+ 
+ export class Cliente extends Persona implements IMostrar{  
     private identificacion: number; 
-    private nombre: string; 
     private telefono: number;
     
     constructor(identificacion: number, nombre: string, telefono: number){
+        super(nombre);
         this.identificacion= identificacion;
         this.nombre= nombre;
         this.telefono= telefono;
